@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* register new font */
+@font-face {
+  /* font-family: "surah-names";
+  src: local("surah-names"), url("./fonts/surah_names.ttf") format("truetype"); */
+  /* font-family: surahnames;
+  src: url("./fonts/surah_names.ttf") format("truetype"); */
+}
+
+@font-face {
+  font-family: "surahnames";
+  /* src: url("./fonts/surah_names.woff") format("woff"); */
+  src: url("./fonts/sura_names.woff2"), url("./fonts/sura_names.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.surah_names {
+  font-family: surahnames !important;
+}
+
+.surah_number {
+  background-color: #f4f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(2.5 * 1rem);
+  height: calc(2.5 * 1rem);
+  border-radius: calc(2.5 * 1rem);
+  transform: rotate(45deg);
+  margin-inline-end: 1.1875rem;
+  /* 
+  -webkit-text-size-adjust: 100%;
+  --rem: 16;
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #3498db;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #e74c3c;
+  --toastify-color-transparent: hsla(0, 0%, 100%, 0.7);
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+  --toastify-toast-width: 320px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: sans-serif;
+  --toastify-z-index: 9999;
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+  --toastify-color-progress-light: linear-gradient(90deg, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+  --spacing-micro: 0.1875rem;
+  --spacing-xxsmall: 0.375rem;
+  --spacing-xsmall: 0.625rem;
+  --spacing-small: 0.8125rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.1875rem;
+  --spacing-mega: 2rem;
+  --font-size-xsmall-dangerous: 0.6rem;
+  --font-size-xsmall: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-normal: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-xlarge: 1.5rem;
+  --font-size-jumbo: 2rem;
+  --line-height-small: 0.8125rem;
+  --line-height-normal: 1rem;
+  --line-height-large: 1.1875rem;
+  --line-height-xlarge: 1.375rem;
+  --line-height-jumbo: 2.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --border-radius-sharp: 0;
+  --border-radius-pill: 20rem;
+  --border-radius-default: 0.25rem;
+  --border-radius-rounded: 0.5rem;
+  --border-radius-circle: 50%;
+  --opacity-10: 10%;
+  --opacity-30: 30%;
+  --opacity-50: 50%;
+  --opacity-75: 75%;
+  --opacity-85: 85%;
+  --z-index-min: -999;
+  --z-index-default: 1;
+  --z-index-sticky: 300;
+  --z-index-header: 400;
+  --z-index-overlay: 500;
+  --z-index-dropdown: 600;
+  --z-index-spinner: 700;
+  --z-index-modal: 800;
+  --z-index-onboarding-overlay: 801;
+  --z-index-onboarding-content: 802;
+  --z-index-onboarding-step: 803;
+  --z-index-onboarding-spotlight: 804;
+  --z-index-max: 999;
+  --transition-fast: 0.16s;
+  --transition-regular: 0.4s;
+  --transition-slow: 0.6s;
+  --shade-0: #f8f9fa;
+  --shade-1: #f4f5f6;
+  --shade-2: #e9ecef;
+  --shade-3: #dee2e6;
+  --shade-4: #ced4da;
+  --shade-5: #adb5bd;
+  --shade-6: #868e96;
+  --shade-7: #495057;
+  --shade-8: #343a40;
+  --shade-9: #212529;
+  --navbar-height: 3.6rem;
+  --navbar-container-height: var(--navbar-height);
+  --banner-height: 3rem;
+  --day-circle-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  --color-primary-faded: #fff;
+  --color-primary-faint: #fff;
+  --color-primary-medium: #000;
+  --color-primary-deep: #fff;
+  --color-secondary-faded: #eaeaea;
+  --color-secondary-faint: #999;
+  --color-secondary-medium: #f2f2f2;
+  --color-secondary-deep: #333;
+  --color-success-faded: #ebf9fa;
+  --color-success-faint: #c2edef;
+  --color-success-medium: #2ca4ab;
+  --color-success-deep: #258c91;
+  --color-error-faded: #f7d4d6;
+  --color-error-faint: #ff1a1a;
+  --color-error-medium: #ee0102;
+  --color-error-deep: #c50000;
+  --color-warning-faded: #fef3dc;
+  --color-warning-faint: #ffdfaa;
+  --color-warning-medium: #ffb300;
+  --color-warning-deep: #ab570a;
+  --color-text-default: #272727;
+  --color-text-faded: #666;
+  --color-text-inverse: #fff;
+  --color-text-link: #2ca4ab;
+  --color-text-warning: #ab570a;
+  --color-text-error: #c50000;
+  --color-background-default: #fff;
+  --color-background-elevated: #fff;
+  --color-background-alternative-faded: var(--shade-0);
+  --color-background-alternative-faint: var(--shade-1);
+  --color-background-alternative-medium: var(--shade-2);
+  --color-background-alternative-deep: var(--shade-6);
+  --color-background-inverse: #000;
+  --color-background-backdrop: rgba(0, 0, 0, 0.6);
+  --color-background-lighten: hsla(0, 0%, 100%, 0.8);
+  --color-borders-hairline: #ebeef0;
+  --color-highlight: #79ffe1;
+  --shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-normal: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-xlarge: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-jumbo: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-sticky: 0 12px 10px -10px rgba(0, 0, 0, 0.12);
+  --scrollbar-background: var(--shade-2);
+  --scrollbar-thumb: var(--shade-4);
+  --scrollbar-thumb-hover: var(--shade-6);
+  --scrollbar-thumb-active: var(--shade-7);
+  --flow-side-spacing: var(--spacing-small);
+  color: inherit;
+  cursor: pointer;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1.3540000916;
+  background-color: var(--color-background-alternative-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(2.5 * var(--spacing-medium));
+  height: calc(2.5 * var(--spacing-medium));
+  border-radius: var(--border-radius-default);
+  transform: rotate(45deg);
+  margin-inline-end: var(--spacing-large); */
+}
+
+.surah_number > span {
+  transform: rotate(-45deg);
+}
+
+@font-face {
+  font-family: "MehrNastaliq";
+  src: local("Mehr Nastaliq Web"), url("./fonts/urdu/MehrNastaliqWeb.woff2"),
+    url("./fonts/urdu/MehrNastaliqWeb.woff") format("woff"), url("./fonts/urdu/MehrNastaliqWeb.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* // only apply this font to Urdu characters https://jrgraphix.net/r/Unicode/0600-06FF */
+  unicode-range: U+0600-06FF;
+}
+
+.mehr-nastaliq {
+  font-family: "MehrNastaliq, Mehr Nastaliq Web, Helvetica Neue, Helvetica, Arial, serif";
+}
